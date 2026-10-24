@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nama Anda – Website Pribadi</title>
+  <meta name="description" content="Website pribadi Nama Anda dengan tema kuning lembut yang ceria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#beranda">Nama Anda</a>
+    <nav id="nav" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#hobi">Hobi</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="header-actions">
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Ganti ke mode malam">🌙</button>
+      <button id="menu-toggle" class="icon-btn menu-btn" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="beranda" class="hero">
+      <div class="hero-text">
+        <p id="greeting" class="greeting">Halo, saya</p>
+        <h1>Nama Anda</h1>
+        <p class="lead">Tulis satu kalimat ceria tentang diri Anda di sini. Ketuk rumah anjing untuk melihat kejutan kecil.</p>
+        <div class="hero-buttons">
+          <a class="btn" href="#proyek">Lihat proyek</a>
+          <a class="btn btn-light" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <p id="bubble" class="bubble" role="status">Ketuk rumahku!</p>
+        <button id="doghouse" class="doghouse" type="button" aria-label="Ketuk rumah anjing untuk pesan baru">
+          <span class="roof"><span id="initials">NA</span></span>
+          <span class="wall"><span class="door"></span></span>
+        </button>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <h2>Tentang saya</h2>
+      <div class="about-grid">
+        <p>Saya tinggal di Surakarta, Jawa Tengah. Ceritakan latar belakang, pendidikan, atau pekerjaan Anda dalam dua sampai tiga kalimat.</p>
+        <ul class="card facts">
+          <li><strong>Lokasi</strong> Surakarta, Indonesia</li>
+          <li><strong>Pekerjaan</strong> Isi pekerjaan Anda</li>
+          <li><strong>Makanan favorit</strong> Isi makanan favorit Anda</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hobi" class="section">
+      <h2>Hobi</h2>
+      <ul class="chips">
+        <li>🎧 Mendengarkan musik</li>
+        <li>📚 Membaca</li>
+        <li>🍪 Mencoba kue baru</li>
+        <li>🌳 Jalan sore</li>
+        <li>💻 Ngoding</li>
+      </ul>
+    </section>
+
+    <section id="proyek" class="section">
+      <h2>Proyek</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Proyek pertama</h3>
+          <p>Jelaskan apa yang Anda buat, untuk siapa, dan apa hasilnya.</p>
+          <a href="#">Lihat proyek</a>
+        </article>
+        <article class="card">
+          <h3>Proyek kedua</h3>
+          <p>Sebutkan alat atau teknologi yang Anda pakai.</p>
+          <a href="#">Lihat proyek</a>
+        </article>
+        <article class="card">
+          <h3>Proyek ketiga</h3>
+          <p>Hapus kartu ini jika belum ada proyek ketiga.</p>
+          <a href="#">Lihat proyek</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <h2>Kontak</h2>
+      <p>Kirim pesan lewat formulir ini. Pesan akan dibuka di aplikasi email Anda.</p>
+      <form id="contact-form" class="card" novalidate>
+        <label for="name">Nama</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+        <p class="error" id="name-error" role="alert"></p>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+        <p class="error" id="email-error" role="alert"></p>
+
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <p class="error" id="message-error" role="alert"></p>
+
+        <button class="btn" type="submit">Kirim pesan</button>
+        <p id="form-status" class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Nama Anda. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
